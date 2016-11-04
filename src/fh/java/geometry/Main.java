@@ -23,6 +23,13 @@ public class Main {
         fillList(shapeList);
         printList(shapeList);
 
+        List<Circle> circleList = new ArrayList<>();
+        for (GeometricShape shape : shapeList){
+            if(shape instanceof Circle){
+                Circle circle = (Circle)shape;
+                circleList.add(circle);
+            }
+        }
 
     }
 
@@ -33,6 +40,16 @@ public class Main {
         shapeList.add(new Circle(2,2,4));
 
         shapeList.add(new Rectangle(0,0,4.0,6.0));
+        shapeList.add(new Rectangle(0,0,4.0,7.0));
+        shapeList.add(new Rectangle(0,0,4.0,8.0));
+        shapeList.add(new Rectangle(0,0,4.0,9.0));
+
+        shapeList.add(new RightTriangle(0,0,1.0,3.0));
+        shapeList.add(new RightTriangle(1,5,1.0,3.0));
+        shapeList.add(new RightTriangle(2,4,2.0,3.0));
+        shapeList.add(new RightTriangle(3,3,3.0,3.0));
+        shapeList.add(new RightTriangle(4,2,4.0,3.0));
+        shapeList.add(new RightTriangle(5,1,5.0,3.0));
 
 
     }
